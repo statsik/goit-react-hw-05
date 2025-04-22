@@ -13,18 +13,13 @@ const MovieReviews = () => {
     const apitoken = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MjQ3ZGY3NDNlMzg3Y2ZmODBjMGU1NDdjMTJjM2E5NCIsIm5iZiI6MTc0NDk3Nzk0OC4zMzQsInN1YiI6IjY4MDI0MDFjZTAzMjA3ZDBiMWQ5MjExYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-Q2xRsc_zEegMAPsTvGYa-VUQFnntVU0EnuiYfllqsE';
     const url = `https://api.themoviedb.org/3/movie/${movieId}/reviews?language=en-US`;
 
-    const options = {
-        headers: {
-            Authorization: `Bearer ${apitoken}`
-        }
-    };
-
-    axios.get(url, options)
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-
     useEffect(() => {
         const fetchMovie = async () => {
+            const options = {
+                headers: {
+                    Authorization: `Bearer ${apitoken}`
+                }
+            };
             setError(null);
             setLoading(true);
             try {

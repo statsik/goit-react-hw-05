@@ -71,7 +71,7 @@ const MovieDetailsPage = () => {
                     </div>
                     <ul className="navlink-det-pag">
                         <li><NavLink to={`/movies/${movie.id}/cast`} className="navlink-cast">Cast</NavLink></li>
-                        <li><NavLink to={`/movies/${movie.id}/review`} className="navlink-reviews">Reviews</NavLink></li>
+                        <li><NavLink to={`/movies/${movie.id}/reviews`} className="navlink-reviews">Reviews</NavLink></li>
                     </ul>
                     
                     <Outlet />
